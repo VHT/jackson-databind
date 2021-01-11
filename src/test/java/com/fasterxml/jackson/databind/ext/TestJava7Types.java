@@ -15,7 +15,7 @@ public class TestJava7Types extends BaseMapTest
     {
         ObjectMapper mapper = new ObjectMapper();
 
-        Path input = Paths.get("/tmp", "foo.txt");
+        Path input = Paths.get("c:/tmp", "foo.txt");
 
         String json = mapper.writeValueAsString(input);
         assertNotNull(json);
@@ -32,7 +32,7 @@ public class TestJava7Types extends BaseMapTest
     {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enableDefaultTyping(DefaultTyping.NON_FINAL);
-        Path input = Paths.get("/tmp", "foo.txt");
+        Path input = Paths.get("c:/tmp", "foo.txt");
 
         String json = mapper.writeValueAsString(new Object[] { input });
 
